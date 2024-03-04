@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/escapeZombiesLevel1.css">
+    <link rel="stylesheet" href="../css/escapeZombiesLevel2.css">
+    <link rel="stylesheet" href="../css/escapeZombiesLevel3.css">
+
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="../imagenes/logo.jpeg" alt="">
+                <img src="../imagenes/logotipo.jpeg" alt="">
+            </div>
+            <div id="enlaces">
+                <ul>
+                    <a href="../index.html" class="enlaceHome"><li class="enlaceHome">Home</li></a>
+                    <a href="form_registro.html" class="enlaceRegistro"><li class="enlaceRegistro">Registro</li></a>
+                    <a href="login.html" class="enlaceLogin"><li class="enlaceLogin">Login</li></a>
+                    <a href="pagina_admin.html" class="perfilUsuarioAdmin"><li class="perfilUsuarioAdmin">Perfil admin</li></a>
+                    <!-- el enlace ver usuarios solo estará disponible para el rol de administrador, para que pueda eliminarlos -->
+                    <a href="ver_usuarios.html" class="enlaceVerUsuarios"><li class="enlaceVerUsuarios">Ver usuarios</li></a>
+                    <a href="pagina_usuario.html" class="perfilUsuario"><li class="perfilUsuario">Perfil usuario</li></a>
+                    <a href="nivelesEscapeCocina.html" class="nivelesEscCocina"><li class="nivelesEscCocina">Escape Cocina</li></a>
+                    <a href="nivelesEscapeZombies.html" class="nivelesZombies"><li class="nivelesZombies">Escape Zombies</li></a>
+
+                    <button type="submit" class="botonLogout">Logout</button>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="frase">
+            <p id="recomendacionVideoIntro">Activa el sonido</p>
+            <img src="../imagenes/imgZombiesLvl1/volumen.png" alt="" id="imagenSonido"><br>
+        </div>
+        <!-- botons bàsics del joc i videeo final quan acabem el joc si ens el pasem -->
+        <div id="divIniciarJuego">
+            <button id="iniciarJuegoFacil">Start</button>
+            <button id="reintentar">Reintentar</button>
+            <button id="guardarPartida">Guardar</button>
+            <button id="verTutorial">Ver Tutorial y reglas</button>
+            <video id="video" src="../videos/finalZombies.mp4"  controls></video>  
+        </div>
+        <!-- div per regles i tutorial -->
+        <div id="tutorialReglas">
+            <video id="video2" src="../videos/tutorialZombiesLvl3.mp4"  controls></video>  
+            <p class="reglas" style="margin-top: 10px;">Al acabar el juego tu puntuación base será de 10000 puntos, ya que éste es el ultimo nivel.</p>
+            <p class="reglas">Si acabas el juego con más de 25 balas en recámara recibirás un bonus de 10000 puntos</p>
+            <p class="reglas">Si lo acabas con más de 20 balas pero menos de 25 recibirás 5000 puntos extra</p>
+            <p class="reglas">Si finalizas sobrándote más de 40 segundos sumarás 5000 puntos más.</p>
+            <p class="reglas">Sólo podrás guardar al final la partida</p>
+        </div>
+        <div id="recursosSalud">
+            <!-- Parra barra de vida -->
+            <div class="progress">
+                <p>VIDA</p>
+                    <progress id="vida" max="100" value="100" min="0"></progress>
+                    <span id="textoVida">100%</span>
+            </div>
+        </div>
+        <div id="recursosJuego">
+            <h1 id="datosFinales">Tu puntuación final es de: <span id="puntuacionHTML">0</span></h1>
+            <span id="cronometro"></span>
+            <h5 id="cronoFinal"></h5>
+        </div>
+        <div id="gameOver">
+            <h1 style="color: red;display: none;" id="gameOverTitulo">Estás...muerto...</h1>
+            <img src="../imagenes/imgZombiesLvl3/horda.jpeg" alt="" id="imagenGameOver">
+        </div>
+
+        <div id="huidaFinal">
+            <h1 id="corre">Huye hacia la azotea!!!</h1>
+            <h3 id="corre2">CLICKA EN LA FLECHA PARA CORRER!</h3>
+            <div>
+                <p>DISTANCIA COMPLETADA</p>
+                    <progress id="huida" max="100" value="0" min="0"></progress>
+                    <span id="textoHuida">0%</span>
+            </div>
+            <img src="../imagenes/imgZombiesLvl3/pasilloHospital3.jpeg" alt="" id="imagenHuidaFinal">
+            <img src="../imagenes/imgZombiesLvl3/flecha.jpeg" alt="" id="imagenFlecha">
+        </div>
+
+        <div id="imagenesJuego">
+            <div id="terrenoDeJuego">
+                <div id="imagenes1">
+                    <img src="../imagenes/imgZombiesLvl3/zombie1.jpeg" alt="" id="zombie1" class="imagenes1" class="custom-cursor">
+                    <img src="../imagenes/imgZombiesLvl3/zombie2.jpeg" alt="" id="zombie2" class="imagenes1" class="custom-cursor">
+                    <img src="../imagenes/imgZombiesLvl3/zombie3.jpeg" alt="" id="zombie3" class="imagenes1" class="custom-cursor">
+                    <img src="../imagenes/imgZombiesLvl3/zombie4.jpeg" alt="" id="zombie4" class="imagenes1" class="custom-cursor">
+                    <img src="../imagenes/imgZombiesLvl3/zombie5.jpeg" alt="" id="zombie5" class="imagenes1" class="custom-cursor">
+                </div>
+            </div>
+
+        <div class="imagenesBuenas" id="divImagesBuenas">          
+                <div id="pistola">
+                    <img src="../imagenes/imgZombiesLvl3/pistola.jpg" alt="" id="pistola">
+                    <h4 id="tituloPistola" style="color: red;">0</h4>
+                </div>        
+        </div> 
+        </div>    
+    </main>
+    <script src="../scripts/scriptJugadorConectado.js"></script>
+    <script src="../scripts/escapeZombiesLevel3.js"></script>  
+</body>
+</html>

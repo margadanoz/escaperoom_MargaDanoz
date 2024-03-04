@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.pregunta {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.opciones button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ECA72C;
+    border-radius: 5px;
+    color: black;
+    margin:10px;
+}
+
+button:hover{
+    transform: scale(1.2);
+}
+
+#preguntas{
+    width: 60%;
+    margin: 0 auto;
+    align-items: center;
+    display: none;
+}
+
+#pregunta{
+    margin-top: 100px;
+}
+#gameOver{
+    display: none;
+}
+#gameOver > img{
+    width: 300px;
+    height: 300px;
+}
+
+#datosFinales{
+    display: none;
+}
+
+#videoFinal{
+    width: 300px;
+    height: 300px;
+    align-self: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: none;
+    margin: 0 auto;
+}
+
+#verPistas,#verReglas{
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#reglasLvl3{
+    display: none;
+    flex-flow: column wrap;
+    width: 60%;
+    margin: 0 auto;
+    line-height: 20px;
+    text-align: center;
+}

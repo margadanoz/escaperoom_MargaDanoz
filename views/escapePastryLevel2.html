@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/escapePastryLevel2.css">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="../imagenes/logo.jpeg" alt="">
+                <img src="../imagenes/escapeCocina/logoEscapeCocina.jpeg" alt="">
+            </div>
+            <div id="enlaces">
+                <ul>
+                    <a href="../index.html"><li class="enlaceHome">Home</li></a>
+                    <a href="views/form_registro.html" class="enlaceRegistro"><li class="enlaceRegistro">Registro</li></a>
+                    <a href="views/login.html" class="enlaceLogin"><li class="enlaceLogin">Login</li></a>
+                    <a href="pagina_admin.html" class="perfilUsuarioAdmin"><li class="perfilUsuarioAdmin">Perfil admin</li></a>
+                    <!-- el enlace ver usuarios solo estará disponible para el rol de administrador, para que pueda eliminarlos -->
+                    <a href="ver_usuarios.html" class="enlaceVerUsuarios"><li class="enlaceVerUsuarios">Ver usuarios</li></a>
+                    <a href="pagina_usuario.html" class="perfilUsuario"><li class="perfilUsuario">Perfil usuario</li></a>
+                    <button type="submit" class="botonLogout">Logout</button>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div id="divIniciarJuego">
+            <button id="iniciarJuegoFacil">Start Facil</button>
+            <button id="iniciarJuegoDificil">Start Dificil</button>
+            <button id="reintentar">Reintentar</button>
+            <button id="guardarPartida">Guardar</button>
+            <a href="escapePastryLevel3.html"><button id="pasarSiguienteNivel">Pasar a nivel 3</button></a>
+            <!-- <button id="cargarPartida">Cargar partida</button> -->
+        </div>
+        <div id="reglasLevel2">
+            <button id="verReglas">Ver tutorial</button>
+            <div class="reglasNivel2">  
+                <video src="../videos/gamePlayCocina.mp4" controls id="ejemplo"></video>              
+                <h3>Nivel Fácil:</h3><br>
+                <h5>PUNTUACION:</h5><br>
+                <p>
+                     Obtendrás 100 puntos por cada enemigo eliminado.Tendrás 4 enemigos y debes eliminar a 3 para poder vencer.
+                </p>
+                <p>
+                    Tienes 3 tiritas para curarte de los golpes recibidos. Un golpe recibido es cuando haces click en un heroe que no se corresponde con el enemigo que está saliendo en ese momento por pantalla.
+                    Cada tirita descontará 50 puntos. Puedes recibir hasta 2 golpes sin usar tiritas, al tercero será gameover.Tenlo en cuenta por si se te agotan las tiritas,
+                    o por si no quieres usarlas. 
+                </p><br>
+                <p>
+                    BONUS: Si no usas ninguna tirita sumarás 250 puntos a tu puntuación final.
+                    Si no tienes ningún golpe sumado al final de la partida obtendrás 250 puntos extra.
+                    Si acabas el juego sobrándote más de 30 segundos obtendrás 100 puntos extra de recompensa
+                </p>
+                <p>
+                    AYUDA y MECÁNICA DE JUEGO: Cada enemigo aparecerá en pantalla por tiempo aleatorio. En nivel fácil recibes la ayuda
+                    de la palabra <bold>COMBO</bold> cuando salga un enemigo que durará más tiempo en pantalla que el resto para que puedas atacarlo con más seguridad
+                </p>
+                
+                   <h3>Nivel Dificil:</h3><br>
+                   <p>
+                        Tienes 2 tiritas para curarte de los golpes recibidos. Un golpe recibido es cuando haces click en un heroe que no se corresponde con el enemigo que está saliendo en ese momento por pantalla.
+                        Cada tirita descontará 50 puntos. Puedes recibir 1 golpe sin usar tiritas, al segundo será gameover.Tenlo en cuenta por si se te agotan las tiritas,
+                        o por si no quieres usarlas. 
+                </p><br>  
+                <p>
+                    BONUS: Si no usas ninguna tirita sumarás 500 puntos a tu puntuación final.
+                    Si no tienes ningún golpe sumado al final de la partida obtendrás 500 puntos extra.
+                    Si acabas el juego sobrándote más de 30 segundos obtendrás 1000 puntos extra de recompensa
+                </p>  
+                <p>EN ESTE NIVEL NO RECIBES AYUDA DE LA PALABRA COMBO. NUNCA SABRÁS POR CUANTO TIEMPO APARECE UN ENEMIGO EN PANTALLA</p>          
+                <p>Buena suerte!</p>
+            </div> 
+        </div>
+
+        <div id="gameOver">
+            <img src="../imagenes/escapeCocina/gameOver.jpeg" alt="" id="imagenGameOver">
+        </div>
+        <div id="imagenesJuego">
+            <h5 id="comboNecesario">COMBO!!!</h5>
+            <h1 id="enemigoEliminado">ENEMIGO ELIMINADO!</h1>
+        <!-- ponemos class para poder cogerlos todos a la vez si lo necesitamos -->
+        <div id="imagenesMalas">
+            <img src="../imagenes/escapeCocina/fuegoMalo.jpeg" alt="" id="fuegoMalo" class="imagenesMalas">
+            <img src="../imagenes/escapeCocina/chef2.jpeg" alt="" id="chefCabreado" class="imagenesMalas">
+            <img src="../imagenes/escapeCocina/cantandoComandas.jpeg" alt="" id="chefCantando" class="imagenesMalas">
+            <img src="../imagenes/escapeCocina/chefCabreado.jpeg" alt="" id="chefCabreado2" class="imagenesMalas">
+        </div>
+
+        <div class="imagenesBuenas" id="divImagesBuenas">
+            <img src="../imagenes/escapeCocina/tirita.jpeg" alt="" id="tirita">
+            <img src="../imagenes/escapeCocina/tiramisu.jpeg" alt="" id="tiramisu">
+            <img src="../imagenes/escapeCocina/huevon.jpeg" alt="" id="huevon">
+            <img src="../imagenes/escapeCocina/cuchilloBueno.jpeg" alt="" id="cuchilloBueno">
+            <img src="../imagenes/escapeCocina/fuegoBueno.jpeg" alt="" id="fuegoBueno">
+        </div>
+        
+        </div>
+        <div id="recursosJuego">
+            <h1 id="datosFinales">Tu puntuación final es de: <span id="puntuacionHTML">0</span></h1>
+            <span id="cronometro"></span>
+            <div id="recursosSalud">
+                <h2>Tiritas disponibles: <span id="numeroTiritas">3</span></h2>
+                <h2>Golpes recibidos:<span id="golpesRecibidos">0</span></h2>
+            </div>
+        </div>
+    </main>
+    <!-- script per veure si tenim un jugador conectat i per tant ocultar els enllaços que ja no es necessiten -->
+    <script src="../scripts/scriptJugadorConectado.js"></script>
+    <script src="../scripts/escapePastryLevel2.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de preguntas</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/escapePastryLevel3.css">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="../imagenes/logo.jpeg" alt="">
+                <img src="../imagenes/escapeCocina/logoEscapeCocina.jpeg" alt="">
+            </div>
+            <div id="enlaces">
+                <ul>
+                    <a href="form_registro.html" class="enlaceRegistro"><li class="enlaceRegistro">Registro</li></a>
+                    <a href="login.html" class="enlaceLogin"><li class="enlaceLogin">Login</li></a>
+                    <a href="pagina_admin.html" class="perfilUsuarioAdmin"><li class="perfilUsuarioAdmin">Perfil admin</li></a>
+                    <!-- el enlace ver usuarios solo estará disponible para el rol de administrador, para que pueda eliminarlos -->
+                    <a href="ver_usuarios.html" class="enlaceVerUsuarios"><li class="enlaceVerUsuarios">Ver usuarios</li></a>
+                    <a href="pagina_usuario.html" class="perfilUsuario"><li class="perfilUsuario">Perfil usuario</li></a>
+                    <a href="nivelesEscapeCocina.html" class="nivelesEscCocina"><li class="nivelesEscCocina">Escape Cocina</li></a>
+                    <a href="nivelesEscapeZombies.html" class="nivelesZombies"><li class="nivelesZombies">Escape Zombies</li></a>
+                    <button type="submit" class="botonLogout">Logout</button>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- cuerpo del juego -->
+    <div id="divIniciarJuego">
+        <button id="iniciarJuegoFacil">Start Facil</button>
+        <button id="iniciarJuegoDificil">Start Dificil</button>
+        <button id="reintentar">Reintentar</button>
+        <button id="guardarPartida">Guardar</button>
+        <button id="pistas">Pistas</button>
+        <button id="verReglas">Reglas</button>
+    </div>
+    <div id="reglasLvl3">
+        <p>1.-Puedes jugarlo modo fácil o difícil, las partidas se guardan de modo independiente.</p>
+        <p>2.- Se sobreescriben si reintentas o le das a nueva partida en un mismo nivel, es decir, si ya tienes una en nivel facil y empiezas otras en ese mismo nivel</p>
+        <p>3.- Solo dispones de 40 segundos, puedes guardar en cualquier momento, pese a que no puedes cargar partida, debido al poco tiempo de juego que hay</p>
+        <p>4.- Puedes reintentar las veces que quieras la partida</p>
+        <p>5.- Cada pista utilizada te restará 25 puntos en nivel fácil y 50 en nivel difícil</p>
+        <p style="font-weight: bold;">6.- Cada vez que respondas se pasará a la siguiente pregunta, sumándose o restándose automáticamente tu puntuación</p>
+        <p>7.- Cada error restará 50 puntos en nivel fácil y 100 puntos en nivel difícil</p>
+        <p>8.-<span style="font-weight: bold;">Bonus tiempo:</span>Si finalizas el juego con una puntuación obviamente superior a 0 y sobrándote más de 15 segundos obtendrás un bonus de 1000 puntos en nivel fácil y con las mismas condiciones de 2000 en nivel difícil.</p>
+        <p>9.-<span style="font-weight: bold;">Bonus tiempo:</span>Si finalizas el juego con una puntuación superior a 0 y sin haber utilizado ninguna pista obtendrás un bonus de 1000 puntos en nivel fácil y 2000 puntos en nivel difícil</p>
+    </div>
+    <video src="../videos/finalCocina.mp4" controls id="videoFinal"></video>
+    <div id="preguntas">
+        <div id="verPistas"></div>
+        <div id="pregunta"></div>
+        <div id="opciones"></div>
+        <div id="textoPista"></div>
+        <p id="resultado"></p>
+    </div>
+    <div id="gameOver">
+        <img src="../imagenes/escapeCocina/gameOver.jpeg" alt="" id="imagenGameOver">
+    </div>
+    <h1 id="datosFinales"><span id="puntuacionHTML"></span></h1>
+            <span id="cronometro"></span>
+    <script src="../scripts/scriptJugadorConectado.js"></script>
+    <script src="../scripts/escapePastryLevel3.js"></script>
+</body>
+</html>

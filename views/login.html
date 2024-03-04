@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="../imagenes/logo.jpeg" alt="">
+            </div>
+            <div id="enlaces">
+                <ul>
+                    <a href="../index.html"><li>Home</li></a>
+                    <a href="form_registro.html" class="enlaceRegistro"><li class="enlaceRegistro">Registro</li></a>
+                    <a href="login.html" class="enlaceLogin"><li class="enlaceLogin">Login</li></a>
+                    <a href="pagina_admin.html" class="perfilUsuarioAdmin"><li class="perfilUsuarioAdmin">Perfil admin</li></a>
+                    <!-- el enlace ver usuarios solo estará disponible para el rol de administrador, para que pueda eliminarlos -->
+                    <a href="ver_usuarios.html" class="enlaceVerUsuarios"><li class="enlaceVerUsuarios">Ver usuarios</li></a>
+                    <a href="pagina_usuario.html" class="perfilUsuario"><li class="perfilUsuario">Perfil usuario</li></a>
+                    <a href="nivelesEscapeCocina.html" class="nivelesEscCocina"><li class="nivelesEscCocina">Escape Cocina</li></a>
+                    <a href="nivelesEscapeZombies.html" class="nivelesZombies"><li class="nivelesZombies">Escape Zombies</li></a>
+                    <button type="submit" class="botonLogout">Logout</button>
+                </ul>
+            </div>
+        </div>
+    </header>
+<!-- formulario registro -->
+    <main>
+        <div id="formLogin">
+            <label for="">Nombre de usuario</label>
+            <input type="text" class="form-control" id="nomUsuario">
+            <label for="">Password</label>
+            <input type="text" class="form-control" id="password">
+            <small id="smallCamposVacios" style="display: none;margin-top:3px;">Debes rellenar todos los campos</small>
+            <small id="smallNoHayDatos" style="display: none;margin-top:3px;">Tus datos no coinciden con los de ningún usuario registrado</small>
+            <div id="divSubmit">
+                <button type="submit" id="loginButton">Login</button>
+            </div>
+        </div>
+    </main>
+    <script src="../scripts/scriptLogin.js"></script>
+</body>
+</html>
+

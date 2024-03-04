@@ -1,0 +1,8 @@
+El nivell d'entrega d'aquest treball es de fase 3, tot i que hi han certs aspectes com les taules de puntació o el guardat automàtic
+que no he implementat.
+
+Aclaració respecte inici prova nivell 2 zombies:
+	-En aquesta prova no he inclós pista, perque creia que era molt senzilla, com un escalfament pel joc de veritat que es pot consultar
+pistes i guardar i ve a continuació al mateix nivell, pero si tinguessis dificultats la solució és:
+	1:1 barreja vermell i verd perque surti groc
+	1:1 barreja groc i blau i tornarà a apareixer el verd

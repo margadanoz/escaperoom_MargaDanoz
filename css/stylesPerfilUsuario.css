@@ -1,0 +1,109 @@
+#formPerfilUsuario{
+    display: flex;
+    flex-flow: column wrap;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 80px;
+    text-align: center;
+    border: 2px double #1A535C;
+    padding: 20px;
+    border-radius: 5px;
+    height: 500px;
+}
+
+label{
+    margin-top: 20px;
+}
+
+[type = "text"]{
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 15x;
+    text-align: center;
+}
+
+input{
+    font-size: 15px;
+}
+
+input:focus{
+    background-color: lightblue;
+    font-size: 20px;
+}
+
+#divSubmit{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#botonGuardar{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ECA72C;
+    border-radius: 5px;
+    color: black;
+}
+
+#botonGuardar:hover,#botonEliminar:hover{
+    transform: scale(1.2);  
+}
+
+.datosActuales{
+    color: black;
+    font-weight: bold;
+}
+
+#pwdActual,#nomActual{
+    font-weight: normal;
+    color: red;
+}
+
+#divDatosActuales{
+    border-bottom: 1px solid black;
+}
+
+/* PER LA PAGINA DEL ADMIN DE VEURE ELS USUARIS */
+#visualizacionUsuarios{
+    width: 300px;
+    height: 100%;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 20px;
+    color: black;
+    line-height: 1.2;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+#editarBoton,#botonEliminar{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ECA72C;
+    border-radius: 5px;
+    color: black;
+    width: 30%;
+    align-self: center;
+}
+
+#editarBoton:hover{
+    transform: scale(1.1);
+    /* margin-bottom: 10px; */
+}
+
+#mainVerUsuarios{
+    display: flex;
+
+}
+
+/* PER MISSATGES D'ERROR */
+#errorPwds, #camposVacios, #rolesVacios, #confirmMayoriaEdad, #nombreUnico{
+    color: red;
+    font-weight: bold;
+}
+

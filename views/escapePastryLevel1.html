@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/escapePastryLevel1.css">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="../imagenes/logo.jpeg" alt="">
+                <img src="../imagenes/escapeCocina/logoEscapeCocina.jpeg" alt="">
+            </div>
+            <div id="enlaces">
+                <ul>
+                    <a href="../index.html" class="enlaceHome"><li class="enlaceHome">Home</li></a>
+                    <a href="form_registro.html" class="enlaceRegistro"><li class="enlaceRegistro">Registro</li></a>
+                    <a href="login.html" class="enlaceLogin"><li class="enlaceLogin">Login</li></a>
+                    <a href="pagina_admin.html" class="perfilUsuarioAdmin"><li class="perfilUsuarioAdmin">Perfil admin</li></a>
+                    <!-- el enlace ver usuarios solo estará disponible para el rol de administrador, para que pueda eliminarlos -->
+                    <a href="ver_usuarios.html" class="enlaceVerUsuarios"><li class="enlaceVerUsuarios">Ver usuarios</li></a>
+                    <a href="pagina_usuario.html" class="perfilUsuario"><li class="perfilUsuario">Perfil usuario</li></a>
+                    <button type="submit" class="botonLogout">Logout</button>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div id="explicacionJuego">
+            
+                <img src="../imagenes/escapeCocina/cocineroLevel1.png" alt=""><br>
+
+
+            <p>¿Estás listo para tu primer día en ésta cocina?</p>
+            <p id="registroNecesario">Regístrate para poder ingresar al escape!</p>
+            <button id="verReglas">Ver reglas</button>
+            <h3 class="mensajeInfo">Yas has superado este nivel,sal y vuelve a entrar y dale a nueva partida para jugarlo de nuevo si lo deseas</h3>
+            <div class="reglasNivel1">
+                <h4>Condiciones generales:</h4><br>
+                <p>Puedes quitar letras si te equivocas, no descuenta puntos</p>
+                <p>Si quieres volver a empezar una nueva partida sal del juego y vuelve a entrar</p>
+                <p>Los niveles se guardan de manera independiente, puedes tener una partida guardada en fácil  y otra en difícil</p><br>
+                <h3>Nivel Fácil: Juegas 12 palabras.</h3><br>
+                <p>
+                     Dispones de 3 pistas que descontaran 1 punto por pista, a la 4 será game over y 
+                    tendrás que volver a empezar,pero no te preocupes, si vas guardando tu progreso puedes retomarlo
+                    donde lo dejaste.Sumarás un 1 por palabra acertada. Si acabas el juego sobrandote más de 5 minutos
+                    se te sumará a tu puntuación final un bonus de 1000 puntos, si lo haces sobrando más de 4 pero menos de 5 sumarás 500 puntos
+                </p><br>
+                
+                   <h3>Nivel Dificil: Juegas 21 palabras.</h3><br>
+                    <p>   Mismas condiciones que en el fácil, pero si acabas el juego sobrandote más de 5 minutos
+                    se te sumará a tu puntuación final un bonus de 5000 puntos, si lo haces sobrando más de 4 pero menos de 5 sumarás 1000 puntos
+                </p>               
+                <p>Buena suerte!</p>
+            </div> 
+        </div>
+
+        <div class="divGameOver">
+                <button id="volverJugar">Reintentar</button>
+            <img src="../imagenes/escapeCocina/gameOver.jpeg" alt="" id="gameOver">
+        </div>
+        <div class="cronometro">
+            <h1 id="cronometro">00:08:00</h1>
+            <!-- aquí irá corriendo el crono -->
+        </div>
+        <div id="infoUltimaPalabra" style="text-align:center;display: none;">
+            <h3>Esta es la última palabra, guarda después de resolverla</h3>
+        </div>
+        <!-- Per botons de començar nova partida o carregarne d'anterior -->
+        <div class="botonesPartida">
+                <button type="submit" id="nuevaPartidaFacil">Nueva Partida Facil</button>
+                <button type="submit" id="nuevaPartidaDificil">Nueva Partida Dificil</button>
+                <button type="submit" id="cargarPartidaFacil">Cargar Partida Facil</button>
+                <button type="submit" id="cargarPartidaDificil">Cargar Partida Dificil</button>
+                <button id="guardarPartida">Guardar Partida</button><br>
+                <small id="error" style="display: none;margin-top:10px;">No existen datos previos</small>
+        </div>
+
+        <div id="informaGanador">
+            <h3 id="puntuacionUsuario"></h3>
+            <h4 class="informaGanador">Enhorabuena, ahora ya puedes pasar al nivel 2</h4>
+            <a href="escapePastryLevel2.html"><button id="pasarLevel2">Ir a Level 2</button></a>
+        </div>
+        <!-- TRAINING PARA ACCEDER AL PRIMER NIVEL1 -->
+        <div id="trainingPastry">
+            
+            <div class="panelLetras">
+                <!-- aqui cse crearan kos divs -->
+            </div>
+            <!-- Mostrar mensajes de error -->
+            <div id="divGuardarPartida">
+                <button id="quitarLetra">Quitar ultima letra</button>
+                <button id="pista">Pista</button>
+                <div id="divPista">
+                    <!-- aquí dentro aparecerá la pista, lo generamos el contenido desde el script -->
+                </div>
+            </div>
+        </div>
+                    
+        <div id="anagramaCompletado">
+            <!-- Aquí aparecerán las letras en el orden en que se clicken -->
+        </div>
+    </main>
+    <!-- script per veure si tenim un jugador conectat i per tant ocultar els enllaços que ja no es necessiten -->
+    <script src="../scripts/scriptJugadorConectado.js"></script>
+    <script src="../scripts/escapePastryLevel1.js"></script> 
+</body>
+</html>

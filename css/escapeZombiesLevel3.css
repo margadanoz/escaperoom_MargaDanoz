@@ -1,0 +1,199 @@
+#divIniciarJuego{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#recursosJuego{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+}
+#recursosSalud{
+    display: flex;
+    flex-flow: row wrap;
+}
+/* solo se muestra si se pierde el juego */
+#reintentar,#guardarPartida, #pasarSiguienteNivel{
+    display: none;
+}
+
+#gameOver{
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#gameOver > img{
+    display: none;
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    border: 2px solid red;
+    margin: 0 auto;
+}
+
+/* per lletrero de puntuació final al final de joc */
+#datosFinales{
+    display: none;
+}
+
+#iniciarJuegoFacil,#reintentar, #guardarPartida, #pasarSiguienteNivel,#iniciarJuegoDificil,#verReglas,#verTutorial{
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+
+#iniciarJuegoFacil:hover,#reintentar:hover,#guardarPartida:hover,#pasarSiguienteNivel:hover,#iniciarJuegoDificil:hover,#verReglas:hover,#verTutorial:hover{
+    background-color: white;
+    color: red;
+    transform: scale(1.2);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+#verTutorial{
+    margin-left: 20px;
+}
+/* Imatges del joc */
+/* Pwer al terreny de joc */
+#terrenoDeJuego{
+    border: 2px solid red;
+    margin: 0 auto;
+    width: 90%;
+    height: 350px;
+    display: none;
+}
+/* IMAGENES DE RECURSOS */
+#divImagesBuenas{
+    display: flex;
+    flex-flow: row wrap;
+
+}
+.imagenesBuenas > img,#pollo > img,#pistola > img,
+#divBotiquin > img,#armaBlanca > img,#gasolina > img,
+#mano >img{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+#pollo,#pistola,#divBotiquin,#armaBlanca,#gasolina{
+    color: white;
+    text-align: center;
+}
+#imagenes1 > img{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    border-radius: 5px;
+    /* border: 1px solid white; */
+    cursor: pointer;
+    display: none;
+}
+#cronometro{
+    text-align:center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bordeZombiesVivos{
+    border: 2px solid red;
+}
+.progress > p,.progress > span{
+    margin-left: 5px;
+    color: white;
+}
+#vida{
+    background-color: green;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+#horda{
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+
+#huidaFinal{
+    /* display: flex; */
+    flex-flow: column wrap;
+    margin: 0 auto;
+    justify-content: center;
+    display: none;
+    text-align: center;
+    color: white;
+}
+
+#imagenFlecha{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    align-self: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#imagenHuidaFinal{
+    width: 300px;
+    height: 300px;
+    align-self: center;
+}
+
+#cronoFinal{
+    display: none;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#corre{
+    margin-bottom: 10px;
+}
+
+#corre2{
+    margin-bottom: 10px;
+    color: red;
+}
+
+#video{
+    width: 400px;
+    height: 400px;
+    display: none;
+}
+
+#video2{
+    width: 400px;
+    height: 400px;
+    display: none;
+}
+
+#frase{
+    color: white;
+    display: none;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#tutorialReglas{
+   display: none;
+   flex-flow: column wrap;
+   /* margin-top: 10px; */
+   justify-content: center;
+   align-items: center;
+   color: white;
+   text-align: center;
+   line-height: 20px;
+} 
+

@@ -1,0 +1,14 @@
+DIARIO DIA DE DIA 4 A DIA 11:
+
+Creació de primer nivell, segón i tercer del escape de zombies amb els seus scripts i css corresponents.
+Creació dels nivells dificils i tercer nivell tant facil com dificil del nivell 3 del escape de cuina.
+Creació de pagines de regles pels dos escapes.
+CReació de tutorials pels nivells de shooter de escape de cuina i escape de zombies, i redacció de totes les regles al inici dels jocs.
+Creació dels recursos que faltaven per l'escape de zombies d'imtages i videos.
+Correcció d'errors dels escapes.
+Elaboració del manual tècnic del joc.
+
+
+
+
+

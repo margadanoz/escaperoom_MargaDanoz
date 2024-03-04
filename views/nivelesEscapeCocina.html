@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/nivelesEscapeCocina.css">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="../imagenes/logo.jpeg" alt="">
+                <img src="../imagenes/escapeCocina/logoEscapeCocina.jpeg" alt="">
+            </div>
+            <div id="enlaces">
+                <ul>
+                    <a href="../index.html"><li class="enlaceRegistro">Home</li></a>
+                    <a href="form_registro.html" class="enlaceRegistro"><li class="enlaceRegistro">Registro</li></a>
+                    <a href="login.html" class="enlaceLogin"><li class="enlaceLogin">Login</li></a>
+                    <a href="pagina_admin.html" class="perfilUsuarioAdmin"><li class="perfilUsuarioAdmin">Perfil admin</li></a>
+                    <!-- el enlace ver usuarios solo estará disponible para el rol de administrador, para que pueda eliminarlos -->
+                    <a href="ver_usuarios.html" class="enlaceVerUsuarios"><li class="enlaceVerUsuarios">Ver usuarios</li></a>
+                    <a href="pagina_usuario.html" class="perfilUsuario"><li class="perfilUsuario">Perfil usuario</li></a>
+                    <a href="nivelesEscapeZombies.html" class="nivelesZombies"><li class="nivelesZombies">Escape Zombies</li></a>
+                    <button type="submit" class="botonLogout">Logout</button>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- Enlaces para Escaperooms -->
+        <div class="niveles">
+          <a href="/views/escapePastryLevel1.html"><button id="nivel1">Nivel 1</button></a>
+          <a href="#" id="enlaceNivel2"><button id="nivel2">Nivel 2</button></a>
+          <small id="nivel1NoSuperado">Aún no puedes acceder a este nivel, primero debes superar el anterior.</small>
+          <a href="#" id="enlaceNivel3"><button id="nivel3">Nivel 3</button></a>
+          <small id="nivel2NoSuperado">Aún no puedes acceder a este nivel, primero debes superar los anteriores.</small>
+    </main>
+    <!-- script per veure si tenim un jugador conectat i per tant ocultar els enllaços que ja no es necessiten -->
+    <script src="../scripts/scriptJugadorConectado.js"></script>
+    <script src="../scripts/scriptNivelesEscapeCocina.js"></script>
+</body>
+</html>

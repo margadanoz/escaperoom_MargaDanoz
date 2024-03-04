@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'MiFuentePersonalizada';
+    src: url('../fuente/SpecialElite-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'MiFuentePersonalizada',sans-serif;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    background-color: #EFDD8D;
+}
+
+#navbar{
+    background-color: #1A535C;
+    width: 100%;
+    height: 150px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+
+#enlaces{
+    display: flex;
+    /* background-color: red; */
+    padding: 10px;
+    margin: 10px;
+}
+
+#enlaces li{
+    display: inline-block;
+    margin: 20px;
+}
+
+#enlaces li:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#logo img{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+/* Para botón de logout */
+.botonLogout{
+    display: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ECA72C;
+    border-radius: 5px;
+    color: black;
+}
+
+.botonLogout:hover,#verPuntuaciones:hover{
+    transform: scale(1.2);
+}
+
+/* ENLACES OCULTOS HASTA QUE NO SE REGISTRE O LOGEE EL USUARIO,
+CORRESPONDEN A PERFILES DE USUARIO, PAGINAS DE EDICION */
+.perfilUsuarioAdmin,.enlaceVerUsuarios,.perfilUsuario{
+    display: none;
+}
+
+/* per al video de l'escape de cuina */
+#escapeCocina,#escapeZombies{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+#escapeCocina > video,#escapeZombies > video{
+    width: 500px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.videosEscapes{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#puntuaciones{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#reglasCocina,#reglasZombies{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ECA72C;
+    border-radius: 5px;
+    color: black;  
+}
+
+#reglasCocina:hover,#reglasZombies:hover{
+    transform: scale(1.2);
+}
+
+/* CSS PARA PAGINAS DE TUTORIALES */
+
+/* TUTORIAL COCINA */
+.explicacion{
+    display: flex;
+    line-height: 30px;
+    flex-flow: column wrap;
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#nivel1,#nivel2{
+    margin-top: 30px;
+}
+
+#escp{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+#imagenSonido{
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+
+
+
+

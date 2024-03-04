@@ -1,0 +1,136 @@
+@keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+main{
+    margin: 0 auto;
+}
+
+.imagenesBotones{
+
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+#imagenesMalas > img, .imagenesBuenas > img{
+
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        border-radius: 5px;
+        border: 1px solid white;
+        cursor: pointer;
+}
+
+#imagenesJuego{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#comboNecesario, #enemigoEliminado{
+    /* meter aqui animacioin de hearthbeat */
+    display: none;
+    
+}
+
+#cronometro{
+    text-align:center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* para div y boton de iniciar juego */
+#divIniciarJuego{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#iniciarJuegoFacil,#reintentar, #guardarPartida, #pasarSiguienteNivel,#iniciarJuegoDificil,#verReglas{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ECA72C;
+    border-radius: 5px;
+    color: black;
+    margin:10px;
+}
+
+#iniciarJuegoFacil:hover,#reintentar:hover,#guardarPartida:hover,#pasarSiguienteNivel:hover,#iniciarJuegoDificil:hover,#verReglas:hover{
+    transform: scale(1.2);
+}
+
+#tirita{
+    margin-left: 50px;
+    border: 2px solid black;
+    animation: heartbeat 3s infinite;
+}
+
+#recursosJuego{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+}
+/* solo se muestra si se pierde el juego */
+#reintentar,#guardarPartida, #pasarSiguienteNivel{
+    display: none;
+}
+
+#gameOver{
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#gameOver > img{
+    display: none;
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    border: 2px solid red;
+}
+/* per lletrero de puntuació final al final de joc */
+#datosFinales{
+    display: none;
+}
+
+.reglasNivel2{
+    line-height: 20px;
+    text-align: center;
+    display: none;
+    margin-top: 15px;
+}
+
+#reglasLevel2{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 auto;
+    width: 60%;
+}
+
+#ejemplo{
+    width: 400px;
+    height: 400px;
+}
+
+#verReglas{
+    width: 150px;
+    align-self: center;
+}
+
+

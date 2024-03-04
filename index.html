@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="imagenes/logo.jpeg" alt="">
+            </div>
+            <div id="enlaces">
+                <ul>
+                    <a href="views/form_registro.html" class="enlaceRegistro"><li class="enlaceRegistro">Registro</li></a>
+                    <a href="views/login.html" class="enlaceLogin"><li class="enlaceLogin">Login</li></a>
+                    <a href="views/pagina_admin.html" class="perfilUsuarioAdmin"><li class="perfilUsuarioAdmin">Perfil admin</li></a>
+                    <!-- el enlace ver usuarios solo estará disponible para el rol de administrador, para que pueda eliminarlos -->
+                    <a href="views/ver_usuarios.html" class="enlaceVerUsuarios"><li class="enlaceVerUsuarios">Ver usuarios</li></a>
+                    <a href="views/pagina_usuario.html" class="perfilUsuario"><li class="perfilUsuario">Perfil usuario</li></a>
+                    <a href="views/nivelesEscapeCocina.html" class="nivelesEscCocina"><li class="nivelesEscCocina">Escape Cocina</li></a>
+                    <a href="views/nivelesEscapeZombies.html" class="nivelesZombies"><li class="nivelesZombies">Escape Zombies</li></a>
+                    <button type="submit" class="botonLogout">Logout</button>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Enlaces para Escaperooms -->
+        <div id="puntuaciones">
+            <a href="views/reglasYTutorialCocina.html"><button id="reglasCocina">Tutoriales y reglas Escape Cocina</button></a>          
+            <a href="views/reglasYTutorialesZombies.html"><button id="reglasZombies">Tutoriales y reglas Escape Zombies</button></a>
+        </div>
+        <div style="justify-content: center;display: flex;text-align: center;flex-flow: column wrap;">
+            <span>Activa el sonido</span><img src="../imagenes/imgZombiesLvl1/volumen.png" alt="" id="imagenSonido"><br>
+        </div>
+        <div class="videosEscapes">
+            <div id="escapeCocina">
+                <!-- Enlace escaperoom cocina -->
+                <video src="videos/introEscapeCocina.mp4" autoplay controls></video>
+            </div>   
+
+            <div id="escapeZombies">
+                    <video src="videos/intro2.mp4" autoplay controls></video><br>
+            </div>
+            </div>
+            
+        </div>
+    </main>
+    <!-- script per veure si tenim un jugador conectat i per tant ocultar els enllaços que ja no es necessiten -->
+    <script src="scripts/scriptJugadorConectado.js"></script>
+</body>
+</html>

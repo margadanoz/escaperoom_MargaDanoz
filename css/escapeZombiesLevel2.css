@@ -1,0 +1,247 @@
+.botonesPartida{
+    margin: 0 auto;
+    display: flex;
+    margin-top: 20px;
+}
+#video{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 3%;
+    color: white;
+}
+.explicacionJuego,.definePruebaTexto{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    line-height: 20px;
+    display: none;
+    color: white;
+    margin-top: 40px;
+}
+#botonProsigue,#iniciaPrueba2,#resuelveCombinacion,#guardaPartida,#compruebaBonus,#pistas,#pasarSiguienteNivel,#verReglas{
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+#botonProsigue:hover,#iniciaPrueba2:hover,#resuelveCombinacion:hover,#guardaPartida:hover,#compruebaBonus:hover,#pistas:hover,#pasarSiguienteNivel:hover,#verReglas:hover{
+    background-color: white;
+    color: red;
+    transform: scale(1.2);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+#guardaPartida,#resuelveCombinacion{
+    width: 100px;
+    margin-top: 20px;
+}
+/* divs del joc */
+.divPrincipalJuego{
+    display: none;
+    margin: 0 auto;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.divsJuego{
+    width: 200px;
+    height: 200px;
+}
+#red{
+    background-color: red;
+    /* border: 2px solid white; */
+    border-radius: 10px;
+    cursor: pointer;
+}
+#green{
+    background-color: green;
+    /* border: 2px solid white; */
+    border-radius: 10px;
+    cursor: pointer;
+}
+#blue{
+    background-color: blue;
+    /* border: 2px solid white; */
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.mensajesPrueba{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    margin-top: 40px;
+}
+#paso1{
+    display: none;
+}
+#uno,#dos,#tres{
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 100px;
+}
+
+input[type="number"]{
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 30%;
+}
+
+.borderSeleccionado{
+    border: 3px solid orange;
+}
+
+#error{
+    display: none;
+}
+
+/* parte de prueba del ordenador */
+.tituloPrueba2{
+    text-align: center;
+    margin-top: 30px;
+    border-bottom: 2px solid white;
+}
+#tituloPrueba2{
+    color: white;
+}
+.ordenador{
+    display: none;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+#imagenLaboratorio{
+    width: 45%;
+    margin-left: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+#iniciaPrueba2{
+    width: 150px;
+    align-self: center;
+}
+/* primera pregunta y panel de resolucion */
+#quiz{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 40%;
+    color: white;
+    text-align: center;
+}
+#quiz1,#quiz2,#quiz3{
+    display: none;
+    margin-top: 15px;
+}
+/* IMAGEN PRUEBA 2 */
+#imagenLaboratorio > img{
+    width: 500px;
+    height: 500px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-top: 30px;
+    align-self: center;
+}
+#panelDigitos{
+    align-self: center;
+}
+#cronoPrueba2{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+#sorpresaCrono2{
+    display: none;
+}
+
+#pista1,#pista2,#pista3{
+    display:none;
+    color: white;
+    margin-top: 10px;
+}
+
+/* quiz bonus extra */
+#pasarSiguienteNivel{
+    display: none;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#quizBonusExtra{
+    margin-bottom: 10px;
+    margin: 0 auto;
+    display: none;
+    flex-flow: column wrap;
+    width: 50%;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    border: 2px dotted white;
+    padding: 10px;
+  }
+  .checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  #pistas{
+    width: 100px;
+  }
+#resuelveCombinacion{
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+#reglas{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.reglasNivel2{
+    line-height: 20px;
+    text-align: center;
+    display: none;
+    margin-top: 15px;
+}
+
+#puntuacionJugador{
+    color: white;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.mensajeInfo{
+    display: none;
+}
+
+#videoRescate{
+    width: 400px;
+    height: 400px;
+    display: none;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+#noHayDatos{
+    color: red;
+    display: none;
+}
+
+
+
+
+
+

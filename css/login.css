@@ -1,0 +1,61 @@
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#formLogin{
+    display: flex;
+    flex-flow: column wrap;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 80px;
+    text-align: center;
+    border: 2px double #1A535C;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+label{
+    margin-top: 20px;
+}
+
+[type = "text"]{
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 15x;
+    text-align: center;
+}
+
+input{
+    font-size: 15px;
+}
+
+input:focus{
+    background-color: lightblue;
+    font-size: 20px;
+}
+
+
+#divSubmit{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#loginButton, #botonEliminar{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ECA72C;
+    border-radius: 5px;
+    color: black;
+}
+
+#loginButton:hover,#botonEliminar:hover{
+    transform: scale(1.2);
+}
+
+/* PER MISSATGES D'ERROR */
+#smallCamposVacios, #smallNoHayDatos{
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/escapeZombiesLevel1.css">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="../imagenes/logo.jpeg" alt="">
+                <img src="../imagenes/logotipo.jpeg" alt="">
+            </div>
+            <div id="enlaces">
+                <ul>
+                    <a href="../index.html" class="enlaceHome"><li>Home</li></a>
+                    <a href="form_registro.html" class="enlaceRegistro"><li class="enlaceRegistro">Registro</li></a>
+                    <a href="login.html" class="enlaceLogin"><li class="enlaceLogin">Login</li></a>
+                    <a href="pagina_admin.html" class="perfilUsuarioAdmin"><li class="perfilUsuarioAdmin">Perfil admin</li></a>
+                    <!-- el enlace ver usuarios solo estará disponible para el rol de administrador, para que pueda eliminarlos -->
+                    <a href="ver_usuarios.html" class="enlaceVerUsuarios"><li class="enlaceVerUsuarios">Ver usuarios</li></a>
+                    <a href="pagina_usuario.html" class="perfilUsuario"><li class="perfilUsuario">Perfil usuario</li></a>
+                    <a href="nivelesEscapeCocina.html" class="nivelesEscCocina"><li class="nivelesEscCocina">Escape Cocina</li></a>
+                    <button type="submit" class="botonLogout">Logout</button>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+<section id="introHistoria">
+    <p id="recomendacionVideoIntro">Visualiza el video antes de empezar a jugar.Activa el sonido</p>
+    <img src="../imagenes/imgZombiesLvl1/volumen.png" alt="" id="imagenSonido"><br>
+
+<video src="../videos/introLore2.mp4" controls></video> 
+
+<button id="verReglas">Ver reglas</button>
+<h3 class="mensajeInfo">Yas has superado este nivel,sal y vuelve a entrar y dale a nueva partida para jugarlo de nuevo si lo deseas</h3>
+<div class="reglasNivel1">
+    <p>Dispondrás de 2 pistas y cada una que utilices descontará 100 puntos</p>
+    <p>Si se agota el tiempo quedas atrapado,tendrás que empezar de nuevo</p>
+    <p>Si no utilizas ninguna recibirás un bonus de 1000 puntos</p>
+    <p>Si finalizas el juego sobrándote más de 3 minutos recibirás un bonus de 1000 puntos,
+        si lo haces sobrando más de 2 serán 500 puntos extra
+    </p>
+    <p>Puedes guardar al resolver </p>
+    <p>Si quieres volver a empezar una nueva partida sal del juego y vuelve a entrar</p>
+    <p>Buena suerte!</p>
+</div> 
+<div class="botonesPartida">
+    <button id="nuevaPartida">Nueva partida</button>
+    <button id="cargaPartida" style="display: none;">Cargar Partida</button>
+    <button id="guardaPartida">Guardar partida</button>
+</div> 
+</section>
+<section class="cuerpoEntero">   
+    <!-- Prova 1 -->
+    <div style="text-align: center; color: white; margin-top: 5%;border-bottom: 2px solid white;">
+        <h1>Prueba 1</h1>
+    </div>
+    <div id="pruebaUno">
+        <img src="../imagenes/imgZombiesLvl1/habitacionProta.jpeg" alt="" id="habitacionProta">
+        <!-- Iconos para la informacion sobre las pruebas -->
+        <div id="iconosHabitacionProta">
+            <div class="tooltip-container" data-tooltip="Esta es la habitación que me prepararon para que pudiera descansar después de mi trabajo 
+                                                        en el laboratorio. Está ubicada en el penúltimo piso del hospital.">
+                <img src="../imagenes/imgZombiesLvl1/lupa.png" alt="" id="lupa">
+            </div>
+            <div class="tooltip-container2" data-tooltip="Barcelona parece muerta tras este cristal...maldito virus...">
+                <img src="../imagenes/imgZombiesLvl1/ventana.png" alt="" id="ventana">
+            </div>                
+            <div class="tooltip-container3" data-tooltip="Esta es la letra de mi compañera Eva...y ha dejado un mensaje bastante extraño en estas notas...:
+                                                        'Código básico para pintar un retrato'
+                                                        ¿Qué querrá decir?">
+                <img src="../imagenes/imgZombiesLvl1/matematicas.png" alt="" id="codigoParteUno">
+            </div>
+            <div class="tooltip-container4" data-tooltip="No me encuentro bien...tengo un mordisco en el brazo y algo me dice que no ha sido por una noche loca...">
+                <img src="../imagenes/imgZombiesLvl1/salud.png" alt="" id="estadoSalud">
+            </div>
+            <div class="grabacion">
+                <button class="grabacion"><img src="../imagenes/imgZombiesLvl1/grabadora.png" alt="" id="grabadora"></button>
+                <small>Haz click en la grabadora cuando hayas leido el resto de mensajes</small>
+                <audio src="../audios/prueba1/audioCompletoPrueba1.mp3" class="audioEva" controls ></audio>
+            </div>
+        </div>
+        <img src="../imagenes/imgZombiesLvl1/cerrojo.jpeg" alt="" id="cerrojoPrueba">    
+        <!-- Resolución de la prueba -->
+        <div class="resolucionPrueba1">
+            <small>Hay otra nota escrita por Eva pegada a la puerta...</small><br>
+            <button id="notaPuerta">Ver Nota</button>
+            <div id="cronometro">
+                <h3 id="cronoHTML">00:05:00</h3>
+                <p id="sorpresaCrono">Sorpresa...si en cinco minutos no resuelves la prueba,
+                    no podrás salir de la habitación y deberás empezar de nuevo.
+                    Puedes guardar en cualquier momento.
+                </p>
+            </div>
+            <div class="notaEva">
+               <img src="../imagenes/imgZombiesLvl1/postit.jpg" alt="" id="postitEva">
+            </div>
+            <div id="puerta">
+                <h3 style="color: white;margin-top: 30px;margin-bottom: 15px;">Introduce los dígitos para abrir la puerta</h3>
+                <div id="panelDigitos">
+                    <input type="text" maxlength="1" class="digito" id="num2">
+                    <input type="text" maxlength="1" class="digito" id="num4">
+                    <input type="text" maxlength="1" class="digito" id="num6">
+                    <input type="text" maxlength="1" class="digito" id="num8">
+                </div>
+                <div id="comprobarDigitos">
+                    <button id="btnComprobarDigitos">Comprobar combinación</button>
+                </div>
+            </div>  
+            <div id="pistas">
+                <p id="explicacionPistas">
+                    Has fallado...te ofrecemos la posibilidad de pistas.
+                    Dispones de 2 y cada una restará cien puntos. Pulsa el botón
+                    una vez para ver una, y si necesitas la segunda vuelve a pulsarlo.
+                </p>
+                <button id="verPistas">
+                    Ver Pistas
+                </button>
+                    <p id="pistaUno">
+                       1.-Parece que los números siguen un patrón...
+                    </p>
+                    <p id="pistaDos">
+                        2.-Elimina el 1, porque la constante es de 2 y piensa
+                        haciendo eso que faltaría al final...
+                    </p>
+            </div>
+        <!-- perque surti només quan es guanya, accés nou nivell-->
+        </div>
+    </div> 
+        <a href="escapeZombiesLevel2.html" style="margin-bottom: 50px;"><button id="siguienteNivel">Guarda y accede al siguiente nivel</button></a>
+    </section>
+    <script src="../scripts/scriptJugadorConectado.js"></script>
+    <script src="../scripts/escapeZombiesLevel1.js"></script>  
+</body>
+</html>

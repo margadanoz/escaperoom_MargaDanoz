@@ -1,0 +1,222 @@
+#trainingPastry{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.panelLetras{
+    display: flex;
+    flex-flow: row wrap;
+    /* margin-top: 100px; */
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+    
+}
+
+.letra {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid #721121;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+}
+
+.letra:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    color: white;
+    background-color: #82a5f2;
+}
+
+/* PEL DIV PER ON TREUREM LES LLETRES ENDREÇADES SEGONS EL CRITERI DEL JUGADOR */
+#anagramaCompletado{
+
+    height: 200px;
+    width: fit-content;
+    background-color: lightseagreen;
+    border: 2px double solid;
+    border-radius: 5px;
+    margin:0 auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    justify-content: center;
+}
+
+#anagramaCompletado .letraSeleccionada{
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: lightgreen;
+    border: 2px solid #721121;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* PER MISSATGE DE QUAN S'EQUIVOQUEN */
+#error{
+    display: none;
+    color: red;
+    font-weight: bold;
+}
+
+/* Mostrar cuando no hay jugador conectado */
+#explicacionJuego{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#explicacionJuego > img{
+    width: 300px;
+    height: 300px;
+}
+
+
+/* Botones de cargar partida y de nueva partida,
+només visibles si està conectat el jugador */
+.botonesPartida{
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+    /* width: 50%; */
+    margin-top: 50px;
+    display: none;
+}
+
+#nuevaPartidaFacil,#nuevaPartidaDificil, #cargarPartidaFacil,#cargarPartidaDificil, #guardarPartida, #quitarLetra,#pista,#verReglas{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ECA72C;
+    border-radius: 5px;
+    color: black;
+}
+#nuevaPartidaFacil,#nuevaPartidaDificil,#cargarPartidaDificil{
+    margin-right: 20px;
+}
+
+#nuevaPartidaFacil:hover,#nuevaPartidaDificil:hover, #cargarPartidaFacil:hover,#cargarPartidaDificil:hover,#guardarPartida:hover, #quitarLetra:hover,#pista:hover,#verReglas:hover{
+    transform: scale(1.2);
+}
+
+#pista{
+    margin-left: 15px;
+}
+
+#divGuardarPartida{
+    display: none;
+}
+
+#cargarPartidaFacil{
+    margin-right: 100px;
+}
+/* DIV QUE DA LAS PISTAS */
+#divPista{
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: none;
+}
+
+/* boton de acceso a level 2, div entero con mensaje */
+
+#informaGanador{
+    display: none;
+    flex-flow: column wrap;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+    background-color: #ECA72C;
+    
+}
+#pasarLevel2,#volverJugar{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ECA72C;
+    border-radius: 5px;
+    color: black;
+    margin-top: 20px;
+}
+
+/* #volverJugar{
+    display: none;
+} */
+
+#pasarLevel2:hover{
+    transform: scale(1.2);
+}
+
+/* para el cronometro */
+.cronometro{
+    display: none;
+}
+
+/* pel panell de quan perden */
+.divGameOver{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+    margin-top: 50px;
+}
+
+.divGameOver > img{
+    display: flex;
+    align-self: center;
+    width: 500px;
+    height: 500px;
+}
+
+
+.reglasNivel1{
+    line-height: 20px;
+    text-align: center;
+    display: none;
+    margin-top: 15px;
+}
+
+#puntuacionJugador{
+    color: white;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.mensajeInfo{
+    display: none;
+}
+
+#verReglas{
+    margin-top: 10px;
+}
+
+#reglasNivel1{
+    width: 60%;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#siguienteDiv{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}

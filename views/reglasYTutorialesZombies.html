@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="../imagenes/logo.jpeg" alt="">
+            </div>
+            <div id="enlaces">
+                <ul>
+                    <a href="../index.html">Home</a>
+                    <a href="form_registro.html" class="enlaceRegistro"><li class="enlaceRegistro">Registro</li></a>
+                    <a href="login.html" class="enlaceLogin"><li class="enlaceLogin">Login</li></a>
+                    <a href="pagina_admin.html" class="perfilUsuarioAdmin"><li class="perfilUsuarioAdmin">Perfil admin</li></a>
+                    <!-- el enlace ver usuarios solo estará disponible para el rol de administrador, para que pueda eliminarlos -->
+                    <a href="ver_usuarios.html" class="enlaceVerUsuarios"><li class="enlaceVerUsuarios">Ver usuarios</li></a>
+                    <a href="pagina_usuario.html" class="perfilUsuario"><li class="perfilUsuario">Perfil usuario</li></a>
+                    <a href="nivelesEscapeCocina.html" class="nivelesEscCocina"><li class="nivelesEscCocina">Escape Cocina</li></a>
+                    <a href="nivelesEscapeZombies.html" class="nivelesZombies"><li class="nivelesZombies">Escape Zombies</li></a>
+                    <button type="submit" class="botonLogout">Logout</button>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div id="escp">
+            <p>Juégalo con sonido activado</p><br>
+            <img src="../imagenes/nivelesZombies/volumen.png" alt="" id="imagenSonido"><br>
+        </div> 
+        <!-- Enlaces para Escaperooms -->
+        <div class="explicacion">
+            <h1>Funcionamiento básico del escape</h1>
+            <p>1.-En este juego no hay niveles de dificultad</p>
+            <p>2.-Tampoco hay explicación al principio, sino que irás descubriendo las pistas
+                y verás el tiempo del que dispones a medida que veas los videos, audios, imágenes y explicaciones
+                que se ofrecen en cada juego
+            </p>
+            <p>AGOTAR TIEMPO: En todos los casos si se agota el tiempo de juego no se podrá guardar la partida,
+                de modo que quedas atrapado. Tendrás que volver a iniciar partida
+            </p>
+            <p>GUARDAR PARTIDA: Puedes guardar en el momento que desees la partida y retomarla más adelante,
+                excepto en la primera parte de la prueba 2,y en la última prueba, dada su mecánica aunque el tiempo esté corriendo no podrás guardar
+                hasta finalizada esa parte. Eso incrementa la dificultad, tenlo en cuenta.
+            </p>
+            <p>CARGAR PARTIDA Y NUEVA PARTIDA: Si decides volver a jugar un nivel ya finalizado,
+                o no finalizado, sobreescribirás la partida anterior
+            </p>
+            <hr>
+            <div id="nivel1">
+                <h1>USO DE PISTAS Y PUNTUACIONES</h1>
+                <h4>Nivel 1:</h4>
+                <p>1.-Dispondrás de 2 pistas</p>
+                <p>2.-La cuarta vez que trates de usar pistas será game Over y tendrás que volver a empezar</p>
+                <p>3.-Las pistas se ejecutan por ronda jugada y se descuentan por ronda jugada</p>
+                <p>4.-Las puntuaciones en base a uso de pistas y tiempo están explicadas al principio del juego</p>
+                <p>5.-El primer nivel trata la resolución de anagramas exclusivamente culinarios en nivel fácil,
+                    y de diferentes temáticas en nivel difícil
+                </p>
+            </div>
+            <hr>
+            <div id="nivel2">
+                <h4>Nivel 2:</h4>
+                <p>1.-En este juego no hay pistas dada su temática y mecánica, en su lugar dispondrás
+                    de 3 tiritas que ayudarán a curarte en caso de daño recibido en nivel fácil y de 2 en nivel difícil.
+                </p>
+                <p>2.-Dado el reducido tiempo de juego, no es posible guardar a media partida, sino una vez acabada esta.</p>
+                <p>3.-Tanto en nivel fácil como en difícil dispondrás de 1 minuto para acabar con tus enemigos</p>
+                <p>4.-Tu puntuación dependerá de las tiritas utilizadas,los golpes recibidos y el tiempo empleado en el juego,
+                    no te preocupes, está explicado al principio
+                </p>
+                <p>Si una vez gastadas las tiritas recibes 3 golpes en nivel fácil o 2 en nivel difícil será game over,
+                    puedes reintentar el juego cuantas veces quieras y se irá sobreescribiendo la partida.
+                    Pero recuerda que las de nivel fácil y las de difícil son independientes, así que podrás conservar ambos registros
+                </p>
+            </div>
+
+            <div id="nivel2">
+                <h4>Nivel 3:</h4>
+                <p>1.-En este juego no hay pistas dada su temática y mecánica, tampoco recibirás ayuda extra como botiquines ni nada por el estilo</p>
+                <p>2.-La munición es limitada, pero te sobra para poder completarlo</p>
+                <p>3.-Si se acaba el tiempo es gameOver</p>
+                <p>4.-Sólo podrás guardar la partida al completar todo el nivel, momento en que podrás visualizar el final</p>
+                <p>Los zombies se matan con cinco tiros, pero podrás huir del último, ya verás en que consiste</p>
+                <p>Si disparas dentro del terreno de juego, el cuadrado delimitado de rojo, recibirás un ataque del zombie y tu barra de vida irá bajando</p>
+                <p>Dispones de un video tutorial al principio para que puedas ver en que consiste el juego</p>
+            </div>
+        </div>
+    <!-- script per veure si tenim un jugador conectat i per tant ocultar els enllaços que ja no es necessiten -->
+    <script src="scripts/scriptJugadorConectado.js"></script>
+    <script src="scripts/scriptPuntuacionesIndex.js"></script>
+</body>
+</html>

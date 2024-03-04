@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/stylesPerfilUsuario.css">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="../imagenes/logo.jpeg" alt="">
+            </div>
+            <div id="enlaces">
+                <ul>
+                    <a href="../index.html"><li>Home</li></a>
+                    <a href="form_registro.html" class="enlaceRegistro"><li class="enlaceRegistro">Registro</li></a>
+                    <a href="login.html" class="enlaceLogin"><li class="enlaceLogin">Login</li></a>
+                    <!-- el enlace ver usuarios solo estará disponible para el rol de administrador, para que pueda eliminarlos -->
+                    <a href="ver_usuarios.html" class="enlaceVerUsuarios"><li class="enlaceVerUsuarios">Ver usuarios</li></a>
+                    <a href="pagina_usuario.html" class="perfilUsuario"><li class="perfilUsuario">Perfil usuario</li></a>
+                    <a href="nivelesEscapeCocina.html" class="nivelesEscCocina"><li class="nivelesEscCocina">Escape Cocina</li></a>
+                    <a href="nivelesEscapeZombies.html" class="nivelesZombies"><li class="nivelesZombies">Escape Zombies</li></a>
+                    <button type="submit" class="botonLogout">Logout</button>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- Mismo display que para usuario-->
+        <div id="formPerfilUsuario">
+            <div id="divDatosActuales">
+                <span class="datosActuales">Nombre actual >><span id="nomActual"></span></span><br>
+                <span class="datosActuales">Contraseña >><span id="pwdActual"></span></span>
+            </div>
+            <label for="">Edita y guarda tus cambios en el perfil:</label>
+            <label for="">Nombre de usuario</label>
+            <input type="text" class="form-control" id="nomUsuario">
+            <small id="nombreUnico" style="display: none;margin-top:3px;" >Lo sentimos,tu nombre ya existe, elige otro, porfavor</small>
+            <label for="">Password</label>
+            <input type="text" class="form-control" id="pwd1">
+            <label for="">Repite el password</label>
+            <input type="text" class="form-control" id="pwd2">
+            <small style="display: none;margin-top:3px;" id="errorPwds">Tus contraseñas no coinciden</small>
+            <small style="display: none;margin-top:3px;" id="camposVacios">Debes rellenar todos los campos</small>
+            <div id="divSubmit">
+                <button type="submit" id="botonGuardar">Guardar cambios</button>
+                <button type="submit" id="botonEliminar">Eliminar Usuario</button>
+            </div>
+        </div>
+    </main>
+    <script src="../scripts/scriptPerfilUsuario.js"></script>
+    <script src="../scripts/scriptJugadorConectado.js"></script>
+</body>
+</html>

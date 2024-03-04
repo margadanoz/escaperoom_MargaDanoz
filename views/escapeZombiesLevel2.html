@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/escapeZombiesLevel1.css">
+    <link rel="stylesheet" href="../css/escapeZombiesLevel2.css">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="../imagenes/logo.jpeg" alt="">
+                <img src="../imagenes/logotipo.jpeg" alt="">
+            </div>
+            <div id="enlaces">
+                <ul>
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html" class="enlaceRegistro"><li class="enlaceRegistro">Home</li></a>
+                    <a href="form_registro.html" class="enlaceRegistro"><li class="enlaceRegistro">Registro</li></a>
+                    <a href="login.html" class="enlaceLogin"><li class="enlaceLogin">Login</li></a>
+                    <a href="pagina_admin.html" class="perfilUsuarioAdmin"><li class="perfilUsuarioAdmin">Perfil admin</li></a>
+                    <!-- el enlace ver usuarios solo estará disponible para el rol de administrador, para que pueda eliminarlos -->
+                    <a href="ver_usuarios.html" class="enlaceVerUsuarios"><li class="enlaceVerUsuarios">Ver usuarios</li></a>
+                    <a href="pagina_usuario.html" class="perfilUsuario"><li class="perfilUsuario">Perfil usuario</li></a>
+                    <a href="nivelesEscapeCocina.html" class="nivelesEscCocina"><li class="nivelesEscCocina">Escape Cocina</li></a>
+                    <a href="nivelesEscapeZombies.html" class="nivelesZombies"><li class="nivelesZombies">Escape Zombies</li></a>
+
+                    <button type="submit" class="botonLogout">Logout</button>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- INtro que es mostrarà la primera vegada que juguem -->
+<section id="introHistoria">
+    <p id="recomendacionVideoIntro">Visualiza el video antes de empezar a jugar.Activa el sonido</p>
+    <img src="../imagenes/imgZombiesLvl1/volumen.png" alt="" id="imagenSonido"><br>
+
+<video id="video" src="../videos/prueba2.mp4" autoplay="1" controls onchange="explicacion"></video>  
+    <button id="verReglas">Ver reglas</button>
+    <h3 class="mensajeInfo">Yas has superado este nivel,sal y vuelve a entrar y dale a nueva partida para jugarlo de nuevo si lo deseas</h3>
+    <div class="reglasNivel2">
+        <p>Cada pista utilizada descontará 100 puntos sobre los 1000 que recibes por pasar el juego.</p>
+        <p>Si se agota el tiempo quedas atrapado,tendrás que empezar de nuevo</p>
+        <p>En la primera parte no dispones de pistas ni guardado,debes superarla
+            y en la segunda parte ya podrás guardar y disponer de tres pistas
+        </p>
+        <p>Si finalizas sobrandote más de 8 minutos recibirás un bonus de 10000 puntos,
+        entre 7 y 8 minuto de 1000 y entre 5 y 7 minutos de 500</p>
+        <p>El premio por no utilizar pistas es de 1000 puntos</p>
+        <p>Si quieres volver a empezar una nueva partida sal del juego y vuelve a entrar</p>
+        <p>Hay sorpresa final...buena suerte!</p>
+    </div>
+</section>
+<div class="botonesPartida">
+    <button id="nuevaPartida">Nueva partida</button>
+    <button id="cargaPartida">Cargar Partida</button>
+    <!-- <small id="noHayDatos">No hay datos previos guardados</small> -->
+</div>  
+<section class="explicacionJuego">
+    <p>Te has librado por poco del ataque de ese zombie y has conseguido llegar al ático...al laboratorio, pero todo está patas arriba.</p>
+    <p>Lo primero es ponerte en contacto con tus compañeros en el refugio, quizás desde allí puedan mandarte ayuda...</p>
+    <p>Pero sabes que jamás dejarían que fueras infectado...</p>
+    <button id="botonProsigue" onmouseover="cambiaTexto()" onmouseleave="vuelveTexto()">Toca cuando lo hayas leido</button>
+</section>
+<section class="definePruebaTexto">
+    <p>El laboratorio está hecho un desastre...pero aún quedan bases de producto con las
+        cuales tu equipo y tú elaborasteis la primera vacuna que retrasa el avance del virus hasta 2 meses.
+    </p>
+    <p>
+        El primer paso es lograr con lo que queda fabricar una última vacuna para ti...
+    </p>
+    <p>
+        Cuando hayas logrado la vacuna, administratela y llama al centro que tenéis en Montjuïc.
+    </p>
+    <p>Buena suerte!</p>
+</section>
+
+<!-- cuerpo del juego -->
+    <div class="tituloPrueba2">
+        <h1 id="tituloPrueba2">Prueba 2</h1>
+    </div>
+    <div class="mensajesPrueba">
+        <p id="paso1">De estos tres colores solo uno quedará,pero antes, para ello debe desaparecer.</p> 
+ </div>
+ <div id="cronoPrueba2">
+    <h3 id="cronoHTML2" style="color: red;">00:10:00</h3>
+    <p id="sorpresaCrono2" style="text-align:center;width: 50%;margin:0 auto;">Más vale que corras...porque se acercan los zombies...
+        Si el tiempo llega a cero quizás descubran donde estás y mueras...En esta primera prueba no dispones de pistas 
+        ni puedes guardar
+    </p>
+</div>
+
+ <section class="divPrincipalJuego">
+     <div id="uno">
+         <div class="divsJuego" id="red" onclick="cuentaClicksRojo()"></div>
+         <input type="number" min="0" id="redInput">
+     </div>
+     <div id="dos">
+         <div class="divsJuego" id="green" onclick="cuentaClicksVerde()"></div>
+         <input type="number" min="0" id="greenInput">
+     </div>
+     <div id="tres">
+         <div class="divsJuego" id="blue" onclick="cuentaClicksAzul()"></div>
+         <input type="number" min="0" id="blueInput">
+     </div>
+     <small id="error">Solo puedes seleccionar dos colores cada vez.Se te han reseteado.</small>
+ </section>
+    <section class="ordenador">
+        <div id="imagenLaboratorio">
+            <button id="iniciaPrueba2" onclick="accesoOrdenador()">Toca cuando lo hayas leido</button>
+            <img src="../imagenes/imgZombiesLvl2/laboratorioPc.jpeg" alt="" id="imagenPc">
+        </div>
+        <div id="quiz">
+            <button id="guardaPartida">Guardar partida</button>
+            <button id="resuelveCombinacion">Resuelve pregunta 1</button>
+            <div id="panelDigitos">
+                <input type="text" maxlength="1" class="clave" id="input1">
+                <input type="text" maxlength="1" class="clave" id="input2">
+                <input type="text" maxlength="1" class="clave" id="input3">
+                <input type="text" maxlength="1" class="clave" id="input4">
+                <input type="text" maxlength="1" class="clave" id="input5">
+                <input type="text" maxlength="1" class="clave" id="input6">
+                <input type="text" maxlength="1" class="clave" id="input7" value="2" readonly>
+            </div>
+            <button id="pistas">Pistas</button>
+            <p id="quiz1">Pregunta 1: Tres números son los que componen el ingrediente.
+                El de medio y el que regalo suman numero de la suerte, el que falta completa
+                justo lo que es su oponente.
+            </p>
+            <small id="pista1"></small>
+            <p id="quiz2">Pregunta 2: Iniciales de dos palabras que siendo sinónimas no significan lo mismo.
+                Refugio íntimo de cada persona, de sus puertas para dentro hay seguridad,
+                de sus puertas para fuera el mundo y su inmensidad.
+            </p>
+            <small id="pista2"></small>
+            <p id="quiz3">Pregunta 3: Sustituye la letra característica de nuestro alfabeto
+                por dos del alfabeto vecino.
+            </p>
+            <small id="pista3"></small>
+        </div>
+        <!-- Quiz final -->
+        <div id="quizBonusExtra">
+            <a href="escapeZombiesLevel3.html"><button id="pasarSiguienteNivel">Guarda y accede al siguiente nivel</button></a>
+            <video id="videoRescate" src="../videos/rescateTlf.mp4" controls onchange="explicacion"></video>  
+            <div id="quizFinal">
+                <p id="reglas">Bonus Extra:Si resuelves la pregunta se dobla tu puntuacion, si la fallas se recorta a la mitad. No tienes porqué contestarla sino quieres y pasarás con tu puntuación actual.</p>
+                <h3>Qué es la Anilina?</h3>
+                <label for="quizExtra1">Un palíndromo</label>
+                <input type="checkbox" id="quizExtra1" name="quizExtra"><br>
+                <label for="quizExtra2">Un líquido con olor a pescado</label>
+                <input type="checkbox" id="quizExtra2" name="quizExtra"><br>
+                <label for="quizExtra3">Producto cuya formulación química acabo de resolver</label>
+                <input type="checkbox" id="quizExtra3" name="quizExtra"><br>
+                <label for="quizExtra4">Nada de las anteriores</label>
+                <input type="checkbox" id="quizExtra4" name="quizExtra"><br>
+                <button id="compruebaBonus">Dar respuesta</button>
+            </div>
+        </div>
+        
+    </section>
+    <script src="../scripts/scriptJugadorConectado.js"></script>
+    <script src="../scripts/escapeZombiesLevel2.js"></script>  
+</body>
+</html>
